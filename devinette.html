@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Devinette</title>
+</head>
+<body>
+    <script>
+        console.log("Bienvenue dans ce jeu de devinette");
+
+var solution = Math.floor(Math.random() * 9) + 1; // Je génère un nombre aléatoire entre 1 et 9
+
+// console.log("(La solution est " + solution + ")");
+
+for (var i = 1; i <= 3; i++) { // je lance la boucle, où i <= au nombre d'essai voulu
+    var essai = Number(prompt("Entrez un nombre entre 1 et 9 pour deviner le nombre aléatoire."));
+    if (essai === solution) {
+        alerte("Vous avez trouvé, bravo !");
+		alert("Vous avez trouvé en " + 3 + " essai(s)")
+        break; // si la réponse est trouvé, la boucle s'arrête et la console l'affiche, en précisant le nombre d'essai nécessaires.
+    } else if ( essai < solution){ // comparent la valeur "essai" à la valeur "solution"
+            console.log(essai + " est trop petit");
+    } else {
+            console.log(essai + " est trop grand");
+
+    }
+}
+    console.log("Vous avez perdu ! Le nombre était : " + solution); // si la solution n'est pas trouvée, la console l'affiche en donnant la solution
+
+    </script>
+</body>
+</html>
