@@ -8,12 +8,12 @@
     <script>
         console.log("Bienvenue dans ce jeu de devinette");
 
-var solution = Math.floor(Math.random() * 9) + 1; // Je génère un nombre aléatoire entre 1 et 9
+var solution = Math.floor(Math.random() * 9) + 0; // Je génère un nombre aléatoire entre 1 et 9
 
 // console.log("(La solution est " + solution + ")");
 
 for (var i = 1; i <= 3; i++) { // je lance la boucle, où i <= au nombre d'essai voulu
-    var essai = Number(prompt("Entrez un nombre entre 1 et 9 pour deviner le nombre aléatoire."));
+    var essai = Number(prompt("Entrez un nombre entre 0 et 9 pour deviner le nombre aléatoire."));
     if (essai === solution) {
         alerte("Vous avez trouvé, bravo !");
 		alert("Vous avez trouvé en " + 3 + " essai(s)")
